@@ -48,7 +48,7 @@ console.log('static directory = ', __dirname + '/public');
 // (url, function to run)
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'Home Page',
+    pageTitle: 'ASL nodejs examples',
     pageHeading: 'Home Page',
     welcomeMessage: 'Welcome to my website',
   });
@@ -57,8 +57,16 @@ app.get('/', (req, res) => {
 // populate page template dynamically
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'About Page',
+    pageTitle: 'ASL nodejs examples',
     pageHeading: 'About Page',
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'ASL nodejs examples',
+    pageHeading: 'Projects Page',
+    welcomeMessage: 'Welcome to my Projects',
   });
 });
 
